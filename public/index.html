@@ -15,8 +15,9 @@
         <div id="container" class="flex"> 
             <div id="logo">Searchies</div>
             <div id="form">
-                <form action="/searches" method="GET">
-                    <textarea name="" id="searchBar" cols="60" rows="1"></textarea>
+                <form action="/searches" method="POST">
+                    <input type="text" name="searchBar" id="searchBar">
+                    <!--<textarea name="" id="searchBar" cols="60" rows="1"></textarea> -->
                     <div id="buttonContainer"> 
                         <button id="search" type="submit" name="submit" value="search">Search</button>
                         <button id="quickSearch" type="submit" name="submit" value="quickSearch">Quick Search</button>

@@ -17,6 +17,7 @@ app.get("/searches", (req, res) => {
 
 app.post("/searches", (req,res) => {
     console.log(req.body);
+    res.redirect('/searches')
 });
 
 app.listen(8080, () => console.log("Hello world"));
