@@ -3,6 +3,7 @@ const app = express();
 const port = 8080;
 const path = require('path');
 const bodyParser = require('body-parser');
+const ejs = require('ejs');
 
 const util = require('util'),
   Bing = require('node-bing-api')({ accKey: '2d7c93e4d3e240fdad1cbb0f952cc591' })
@@ -11,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.set("view engine", "ejs");
+app.set('view engine', 'ejs');
 
 app.get("/", (req, res) => res.send("index"));
 
@@ -21,7 +22,7 @@ app.get("/searches", (req, res) => {
             console.log("inside .then");
             console.log(data);
             console.log(data[0].url);
-            res.render('results.ejs', {link1: data[0].url});
+            res.render('results', {arr: data});
         })
         .catch(error =>{
             console.log("insde catch error");

@@ -18,46 +18,13 @@
             </form>
         </header>
         <main>
-            <div id="result1" class="results">
-                <a href = "<%= link1 %>" > </a>thelink</a>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A maiores est eius, sunt doloribus error voluptatum mollitia iusto nisi rerum, architecto debitis sequi officiis quibusdam odit accusamus magni quia inventore?</p>
-            </div>
-            <div id="result2" class="results">
-                    <a href="">thelink</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque accusantium alias provident similique quasi rem est magnam, quia culpa ipsum ullam nesciunt doloremque eligendi possimus vitae recusandae accusamus fugiat unde? Repellat optio ipsa iusto.</p>
-            </div>
-            <div id="result3" class="results">
-                    <a href="">thelink</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nulla recusandae alias voluptatibus a ipsum aliquid. Suscipit quaerat itaque adipisci corporis ullam optio aspernatur. Rerum quo rem est obcaecati ipsa laborum beatae quis necessitatibus accusantium? Aliquid recusandae commodi quam repellat.</p>
-            </div>
-            <div id="result4" class="results">
-                    <a href="">thelink</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis, quo cupiditate iure magni quia dolor quos in libero eos ipsa aspernatur similique quod ducimus, rerum fugiat neque nihil quas.</p>
-            </div>
-            <div id="result5" class="results">
-                    <a href="">thelink</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quae quaerat non similique animi quidem fugit, placeat quia modi doloremque sit, quos unde in deserunt repellendus exercitationem, dolorem culpa maxime.</p>
-            </div>
-            <div id="result6" class="results">
-                    <a href="">thelink</a>
-                    <p>description</p>
-            </div>
-            <div id="result7" class="results">
-                    <a href="">thelink</a>
-                    <p>description</p>
-            </div>
-            <div id="result8" class="results">
-                    <a href="">thelink</a>
-                    <p>description</p>
-            </div>
-            <div id="result9" class="results">
-                    <a href="">thelink</a>
-                    <p>description</p>
-            </div>
-            <div id="result10" class="results">
-                    <a href="">thelink</a>
-                    <p>description</p>
-            </div>
+            <% arr.forEach(array =>{ %>
+                <div class="results">
+                    <p> <%= array.name %> </p>
+                    <a href="<%= array.url %>"> <%= array.url %> </a>
+                    <p> <%= array.snippet %> </p>
+                </div>
+            <% }) %>
         </main>
     </div>
 </body>
