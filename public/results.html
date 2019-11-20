@@ -11,10 +11,10 @@
     <div id="container">
         <header id="navbar">
             <a href="./index.html"><img src= "./SmLogo.svg" id="smallLogo"></a>
-            <form action="" method="">
-                <textarea name="searchbar" id="searchbar" rows="1"></textarea>
-                <button id="search">S</button>
-                <button id="quickSearch">QS</button>
+            <form action="/searches" method="GET">
+                <input type="text" name="searchBar" id="searchBar">
+                <button id="search" type="submit" name="submit" value="search">S</button>
+                <button id="quickSearch" type="submit" name="submit" value="quickSearch">QS</button>
             </form>
         </header>
         <main>
