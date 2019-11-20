@@ -19,10 +19,12 @@ app.get("/", (req, res) => res.send("index"));
 app.get("/searches", (req, res) => {
     getBingData(req.query.searchBar)
         .then(data => {
-            console.log("inside .then");
-            console.log(data);
-            console.log(data[0].url);
-            res.render('results', {arr: data});
+            if(req.query.submit === 'search'){
+                res.render('results', {arr: data});
+            }
+            else{
+                res.redirect(data[0].url);
+            }
         })
         .catch(error =>{
             console.log("insde catch error");
