@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Searchies</title>
     <link rel="stylesheet" href="./index.css" type="text/css">
+    <link rel="stylesheet" href="./classes.css" type="text/css">
     <script   src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
     <script src="./main.js"></script>
 </head>
 <body>
-    <header>logo</header>
     <main class="flex">
         <div id="container" class="flex"> 
-            <div id="logo">Searchies</div>
+            <div id="imageContainer"><img src="./SearchiesBigLogo.png" alt="searchies logo" id="logo"></div>
             <div id="form">
                 <form action="/searches" method="GET">
-                    <textarea name="" id="searchBar" cols="60" rows="1"></textarea>
+                    <input type="text" name="searchBar" id="searchBar">
                     <div id="buttonContainer"> 
                         <button id="search" type="submit" name="submit" value="search">Search</button>
                         <button id="quickSearch" type="submit" name="submit" value="quickSearch">Quick Search</button>
